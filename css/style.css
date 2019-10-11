@@ -10,6 +10,7 @@ body {
   font-style: normal;
   font-stretch: normal;
   line-height: normal;
+  letter-spacing: normal;
 }
 
 .visually-hidden {
@@ -56,7 +57,7 @@ body {
 .header__item {
   position: relative;
 
-  margin-right: 70px;
+  margin-right: 50px;
 
   font-size: 13px;
   font-weight: bold;
@@ -72,13 +73,260 @@ body {
 .header__item:nth-child(2)::before,
 .header__item:last-child::before {
   position: absolute;
-  left: -35px;
+  left: -25px;
 
   content: ".";
 }
 
 .header__link {
+  padding: 10px;
+
   text-decoration: none;
   color: inherit;
 }
 
+.header__link:hover {
+  text-decoration: underline;
+}
+
+.gallery {
+  padding-top: 170px;
+
+  text-align: center;
+
+  background-color: #f7f7f7;
+}
+
+.gallery__heading {
+  position: relative;
+
+  margin-bottom: 25px;
+
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 3.6px;
+  text-transform: uppercase;
+  color: #353738;
+}
+
+.gallery__heading::before {
+  position: absolute;
+  top: -74px;
+  left: calc(50% - 27px);
+
+  width: 54px;
+  height: 44px;
+  content: "";
+
+  background-image: url('../img/chain.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 0 0;
+}
+
+.gallery__text {
+  max-width: 1080px;
+  margin: 0 auto;
+  margin-bottom: 140px;
+
+  font-size: 18px;
+  line-height: 1.89;
+  color: #848789;
+}
+
+.gallery__item {
+  display: flex;
+  height: 600px;
+  margin: 0;
+}
+
+.gallery__fig-wrap--oliva {
+  order: 2;
+}
+
+.gallery__img--hulot-logo {
+  order: 1;
+}
+
+.gallery__fig-wrap--hulot {
+  order: 2;
+}
+
+.gallery__img--hulot-bike {
+  order: 3;
+}
+
+.gallery__caption {
+  position: relative;
+
+  width: 533px;
+  height: 400px;
+  padding-top: 120px;
+
+  background-color: #fff;
+}
+
+.gallery__caption::after {
+  position: absolute;
+  bottom: -10px;
+  left: calc(50% - 10px);
+
+  width: 20px;
+  height: 10px;
+  content: "";
+
+  background-image: url('../img/triangle.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 0 0;
+}
+
+.gallery__title {
+  position: relative;
+
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 3.6px;
+  text-transform: uppercase;
+  color: #353738;
+}
+
+.gallery__title--oliva::before {
+  position: absolute;
+  top: -58px;
+  left: calc(50% - 21px);
+
+  width: 42px;
+  height: 30px;
+  content: "";
+
+  background-image: url('../img/frame.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 0 0;
+}
+
+.gallery__title--boriosa::before {
+  position: absolute;
+  top: -56px;
+  left: calc(50% - 16px);
+
+  width: 32px;
+  height: 32px;
+  content: "";
+
+  background-image: url('../img/chainset.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 0 0;
+}
+
+.gallery__title--hulot::before {
+  position: absolute;
+  top: -69px;
+  left: calc(50% - 12px);
+
+  width: 24px;
+  height: 41px;
+  content: "";
+
+  background-image: url('../img/fork.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 0 0;
+}
+
+.gallery__text--figure {
+  position: relative;
+
+  max-width: 410px;
+  margin: 0 auto;
+
+  font-size: 16px;
+  line-height: 1.88;
+  text-align: left;
+  color: #848789;
+}
+
+.gallery__text--figure::after {
+  position: absolute;
+  left: calc(50% - 25px);
+  bottom: -30px;
+
+  width: 50px;
+  height: 1px;
+  content: "";
+
+  background-color: #848789;
+}
+
+.tw-comments {
+  padding-top: 180px;
+  padding-bottom: 65px;
+
+  text-align: center;
+  background-color: #f7f7f7;
+}
+
+.tw-comments__name {
+  position: relative;
+
+  margin-bottom: 14px;
+
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1.8px;
+  color: #353738;
+}
+
+.tw-comments__name::before {
+  position: absolute;
+  top: -58px;
+  left: calc(50% - 16px);
+
+  width: 32px;
+  height: 27px;
+  content: "";
+
+  background-image: url('../img/tw-big.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 0 0;
+}
+
+.tw-comments__name--time {
+  font-weight: 300;
+  color: #848789;
+}
+
+.tw-comments__text {
+  max-width: 1040px;
+  margin: 0 auto;
+  margin-bottom: 95px;
+
+  font-size: 24px;
+  font-style: italic;
+  line-height: 1.42;
+  color: #848789;
+}
+
+.tw-comments__btn {
+  background-color: transparent;
+  border: none;
+}
+
+.tw-comments__bullet {
+  display: block;
+  width: 11px;
+  height: 11px;
+
+  border: solid 1px #c8c8c8;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.tw-comments__bullet:hover,
+.tw-comments__bullet--current {
+  border: solid 1px #a9afb3;
+  background-color: #a9afb3;
+}
