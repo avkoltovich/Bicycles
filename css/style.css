@@ -140,7 +140,7 @@ body {
   margin: 0;
 }
 
-.gallery__fig-wrap--oliva {
+.gallery__caption--oliva {
   order: 2;
 }
 
@@ -148,7 +148,7 @@ body {
   order: 1;
 }
 
-.gallery__fig-wrap--hulot {
+.gallery__caption--hulot {
   order: 2;
 }
 
@@ -157,19 +157,26 @@ body {
 }
 
 .gallery__caption {
-  position: relative;
-
+  display: flex;
+  flex-direction: column;
   width: 533px;
-  height: 400px;
+  height: 600px;
   padding-top: 120px;
 
   background-color: #fff;
 }
 
-.gallery__caption::after {
+.gallery__wrapper {
+  position: relative;
+
+  height: 100%;
+}
+
+.gallery__wrapper::after {
   position: absolute;
   bottom: -10px;
   left: calc(50% - 10px);
+  z-index: 1;
 
   width: 20px;
   height: 10px;
@@ -258,6 +265,12 @@ body {
   content: "";
 
   background-color: #848789;
+}
+
+.gallery__img {
+  position: relative;
+  
+  margin-top: auto;
 }
 
 .tw-comments {
